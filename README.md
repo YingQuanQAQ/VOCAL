@@ -1,12 +1,6 @@
-# Learning to Ground Multi-Agent Communication with Autoencoders
+# VOCAL：面向多智能体协作的可解释离散通信方法
 
-精简后的 GitHub 上传版本，只保留项目的核心研究代码与最关键的说明文件。
 
-## 这个目录适合做什么
-
-- 直接作为一个新的 GitHub 仓库根目录
-- 作为论文复现和代码展示版本
-- 作为后续继续清理、补充实验说明和结果图的基础版本
 
 ## 包含内容
 
@@ -21,14 +15,6 @@
 | `marl-grid/vocal_task_specs.py` | 各任务的槽位语义词表 |
 | `marl-grid/vqvib_utils.py` | `vqvib` 原型量化模块 |
 
-## 不包含内容
-
-为保证仓库清爽、便于上传和审阅，这个目录已经去掉了：
-
-- `runs/` 训练日志、checkpoint、TensorBoard 文件
-- 图片、视频、PDF、草图等展示产物
-- 本地模型权重和缓存文件
-- 与本地实验环境绑定过强的中间结果
 
 ## 方法简介
 
@@ -36,7 +22,7 @@
 
 使用自编码式通信约束学习消息表示，让通信通道既服务于协作任务，也更容易分析。
 
-### `vocal`
+### `vocal`（本项目方法）
 
 在通信学习中加入语言锚点，把消息空间与人工设计的语义槽位词表对齐，增强可解释性。
 
@@ -100,12 +86,6 @@ python train_ae.py --method vocal --gpu 0 --set num_workers 1 env_cfg.max_steps 
 python train_ae.py --method vqvib --gpu 0 --set num_workers 1 env_cfg.max_steps 400
 ```
 
-## 上传前建议
-
-- 把 README 里的绝对路径继续替换成相对路径或公开依赖地址
-- 补一个仓库级别的 `LICENSE`
-- 补充结果图、方法框架图和代表性实验结论
-- 如果计划让他人复现，建议增加统一的环境安装脚本
 
 ## 引用
 
@@ -113,7 +93,7 @@ python train_ae.py --method vqvib --gpu 0 --set num_workers 1 env_cfg.max_steps 
 
 ```bibtex
 @thesis{he2026vocal,
-  title={VOCAL：面向多智能体协作的可解释离散通信方法},
+  title={面向多智能体协作的可解释离散通信方法},
   author={何乔},
   year={2026},
   school={中国地质大学（武汉）},
